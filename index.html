@@ -4,88 +4,152 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex nofollow">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
-  <title>Veoリンク集</title>
+  <title>動画リンク集</title>
   <style>
-    body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      padding: 24px;
-      max-width: 900px;
-      margin: 0 auto;
-      background: #f7f7f7;
-      color: #222;
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #dbe2ea;
+      --accent: #2563eb;
+      --accent2: #eff6ff;
     }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
     h1 {
       font-size: 28px;
-      margin-bottom: 8px;
+      margin: 0 0 8px;
     }
+
     .note {
-      margin-bottom: 20px;
-      color: #555;
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
     }
+
     .group {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 16px 18px;
-      margin-bottom: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
     }
+
     .group h2 {
       font-size: 20px;
-      margin: 0 0 10px;
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
     }
+
     ul {
-      padding-left: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    li {
       margin: 0;
     }
-    li {
-      margin: 10px 0;
-      word-break: break-all;
-    }
-    a {
-      color: #0056cc;
+
+    a.link {
+      display: block;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--accent);
       text-decoration: none;
+      font-weight: 600;
+      word-break: break-all;
+      transition: background 0.15s ease, border-color 0.15s ease;
     }
-    a:hover {
-      text-decoration: underline;
+
+    a.link:hover,
+    a.link:focus {
+      background: var(--accent2);
+      border-color: #bfdbfe;
+      outline: none;
     }
+
     .small {
-      font-size: 14px;
-      color: #666;
-      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e5eefc;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 700;
     }
   </style>
 </head>
 <body>
-  <h1>Veoリンク集</h1>
-  <div class="note">Fire TV で開く用のリンク一覧です。</div>
+  <div class="container">
+    <h1>Veoリンク集</h1>
+    <p class="note">Fire TV で開く用のリンク一覧です。日付ごとに整理しています。</p>
 
-  <div class="group">
-    <h2>2026-05-18</h2>
-    <ul>
-      <li><a href="https://app.veo.co/matches/20260517-1u11-v40e43ae/"
-target="_blank">ミーム➀</a></li>
-      <li><a href="https://app.veo.co/matches/20260517-3u9-v9220667/"
-target="_blank">ミーム➁</a></li>
-      <li><a href="https://app.veo.co/matches/20260517-3u11-v62638bc/"
-target="_blank">ミーム③</a></li>
-      <li><a href="https://app.veo.co/matches/20260517-u114-v297eddf/"
-target="_blank">ミーム④</a></li>
-      <li><a href="https://app.veo.co/matches/20260517-5u11-vc1cf240/"
-target="_blank">ミーム➄</a></li>
-      <li><a href="https://app.veo.co/matches/20260517-6u11-v213286d/"
-target="_blank">ミーム⑥</a></li>
-    </ul>
-    <div class="small">必要に応じてリンクを追加してください。</div>
-  </div>
+    <div class="topbar">
+      <span class="badge">noindex</span>
+      <span class="badge">Fire TV向け</span>
+      <span class="badge">更新しやすい</span>
+    </div>
 
-  <div class="group">
-    <h2>練習用</h2>
-    <ul>
-      <li><a href="https://example.com/4" target="_blank">練習動画A</a></li>
-      <li><a href="https://example.com/5" target="_blank">練習動画B</a></li>
-    </ul>
+    <div class="group">
+      <h2>20260517 ミームTRM</h2>
+      <ul>
+        <li><a class="link" href="https://app.veo.co/matches/20260517-1u11-v40e43ae/" target="_blank" rel="noopener noreferrer">ミーム①</a></li>
+        <li><a class="link" href="https://app.veo.co/matches/20260517-3u9-v9220667/" target="_blank" rel="noopener noreferrer">ミーム②</a></li>
+        <li><a class="link" href="https://app.veo.co/matches/20260517-3u11-v62638bc/" target="_blank" rel="noopener noreferrer">ミーム③</a></li>
+        <li><a class="link" href="https://app.veo.co/matches/20260517-u114-v297eddf/" target="_blank" rel="noopener noreferrer">ミーム④</a></li>
+        <li><a class="link" href="https://app.veo.co/matches/20260517-5u11-vc1cf240/" target="_blank" rel="noopener noreferrer">ミーム⑤</a></li>
+        <li><a class="link" href="https://app.veo.co/matches/20260517-6u11-v213286d/" target="_blank" rel="noopener noreferrer">ミーム⑥</a></li>
+      </ul>
+      <div class="small">必要に応じてリンクを追加してください。</div>
+    </div>
+
+    <div class="group">
+      <h2>練習用</h2>
+      <ul>
+        <li><a class="link" href="https://example.com/4" target="_blank" rel="noopener noreferrer">練習動画A</a></li>
+        <li><a class="link" href="https://example.com/5" target="_blank" rel="noopener noreferrer">練習動画B</a></li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
