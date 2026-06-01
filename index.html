@@ -7,7 +7,6 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-
   <title>動画リンク集</title>
   <style>
     :root {
@@ -18,6 +17,8 @@
       --border: #dbe2ea;
       --accent: #2563eb;
       --accent2: #eff6ff;
+      --youtube: #dc2626;
+      --veo: #7c3aed;
     }
 
     body {
@@ -30,7 +31,7 @@
     }
 
     .container {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
@@ -43,61 +44,6 @@
       margin: 0 0 18px;
       color: var(--muted);
       font-size: 14px;
-    }
-
-    .group {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    }
-
-    .group h2 {
-      font-size: 20px;
-      margin: 0 0 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-
-    li {
-      margin: 0;
-    }
-
-    a.link {
-      display: block;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fff;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      word-break: break-all;
-      transition: background 0.15s ease, border-color 0.15s ease;
-    }
-
-    a.link:hover,
-    a.link:focus {
-      background: var(--accent2);
-      border-color: #bfdbfe;
-      outline: none;
-    }
-
-    .small {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 10px;
     }
 
     .topbar {
@@ -117,31 +63,209 @@
       font-size: 12px;
       font-weight: 700;
     }
+
+    details.group {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 0;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px;
+      font-size: 20px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "＋";
+      float: right;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    details[open] > summary::after {
+      content: "－";
+    }
+
+    .content {
+      padding: 16px;
+    }
+
+    .items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    a.link {
+      display: block;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    a.link:hover,
+    a.link:focus {
+      background: var(--accent2);
+      border-color: #bfdbfe;
+      outline: none;
+    }
+
+    a.link.youtube {
+      color: var(--youtube);
+    }
+
+    a.link.veo {
+      color: var(--veo);
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>動画リンク集</h1>
-    <p class="note">BJ50期の動画共有リンク一覧です。</p>
+    <p class="note">Fire TV で開く用のリンク一覧です。日付ごとに折りたたみできます。</p>
 
-    <div class="group">
-      <h2>20260517 ミームTRM</h2>
-      <ul>
-        <li><a class="link" href="https://app.veo.co/matches/20260517-1u11-v40e43ae/" target="_blank" rel="noopener noreferrer">ミーム①</a></li>
-        <li><a class="link" href="https://app.veo.co/matches/20260517-3u9-v9220667/" target="_blank" rel="noopener noreferrer">ミーム②</a></li>
-        <li><a class="link" href="https://app.veo.co/matches/20260517-3u11-v62638bc/" target="_blank" rel="noopener noreferrer">ミーム③</a></li>
-        <li><a class="link" href="https://app.veo.co/matches/20260517-u114-v297eddf/" target="_blank" rel="noopener noreferrer">ミーム④</a></li>
-        <li><a class="link" href="https://app.veo.co/matches/20260517-5u11-vc1cf240/" target="_blank" rel="noopener noreferrer">ミーム⑤</a></li>
-        <li><a class="link" href="https://app.veo.co/matches/20260517-6u11-v213286d/" target="_blank" rel="noopener noreferrer">ミーム⑥</a></li>
-      </ul>
+    <div class="topbar">
+      <span class="badge">noindex</span>
+      <span class="badge">Fire TV向け</span>
+      <span class="badge">日付別整理</span>
     </div>
 
-    <div class="group">
-      <h2>20260412 清新カップ</h2>
-      <ul>
-        <li><a class="link" href="https://youtube.com/playlist?list=PLFzspPm7hQvXGd1MptGSZpzt3nXMu9QR6&si=AR7hKT8GCvVkwK6h" target="_blank" rel="noopener noreferrer">YouTube再生リスト</a></li>
-      </ul>
-    </div>
+    <details class="group">
+      <summary>20251221 厚木リーグ後期</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link youtube" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvUsvfDeUlNS4WcHFN0fSB7q" target="_blank" rel="noopener noreferrer">YouTubeプレイリスト</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260104 鳶尾TRM</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link youtube" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvWnxOhs_r3H4gSpKE1fy5jG" target="_blank" rel="noopener noreferrer">YouTubeプレイリスト</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260110 ミームTRM</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link youtube" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvX8a1H-_CMz5Ol9L_KlmKjQ" target="_blank" rel="noopener noreferrer">YouTubeプレイリスト</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260111 選手権</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link veo" href="https://app.veo.co/matches/20260111-1-0170a10b/" target="_blank" rel="noopener noreferrer">1試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260111-2-172c3cb4/" target="_blank" rel="noopener noreferrer">2試合目</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260124 厚木リーグ後期</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link youtube" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvVha3_4IWvfW7jMMWVu9EE0" target="_blank" rel="noopener noreferrer">YouTubeプレイリスト</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260131 BJ招待</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link youtube" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvU_OHeDr5jOYeadGcMgOTrH" target="_blank" rel="noopener noreferrer">YouTubeプレイリスト</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260201 猿ヶ島TRM</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link veo" href="https://app.veo.co/matches/20260201-cb02568f/" target="_blank" rel="noopener noreferrer">1試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260201-0b36a090/" target="_blank" rel="noopener noreferrer">2試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260201-7740c2ec/" target="_blank" rel="noopener noreferrer">3試合目</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260214-15 アルファカップ</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link youtube" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXEx89V19YaQEpnzMKicJCH" target="_blank" rel="noopener noreferrer">YouTubeプレイリスト</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260301 南林間招待</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link veo" href="https://app.veo.co/matches/20260301-1-v8254bd9/" target="_blank" rel="noopener noreferrer">1試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260301-2-v764c22d/" target="_blank" rel="noopener noreferrer">2試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260301-3-v5603762/" target="_blank" rel="noopener noreferrer">3試合目</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260503 バルシュTRM</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link veo" href="https://app.veo.co/matches/20260503-1u9-v14eee8d/" target="_blank" rel="noopener noreferrer">1試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260503-2u10-vfdcfb45/" target="_blank" rel="noopener noreferrer">2試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260503-3u10-v8caa492/" target="_blank" rel="noopener noreferrer">3試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260503-4u10-v54f8982/" target="_blank" rel="noopener noreferrer">4試合目</a></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="group">
+      <summary>20260510 市内大会</summary>
+      <div class="content">
+        <ul class="items">
+          <li><a class="link veo" href="https://app.veo.co/matches/20260510-1-v161323d/" target="_blank" rel="noopener noreferrer">1試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260510-2-v529068a/" target="_blank" rel="noopener noreferrer">2試合目</a></li>
+          <li><a class="link veo" href="https://app.veo.co/matches/20260510-3-v7811d3c/" target="_blank" rel="noopener noreferrer">3試合目</a></li>
+        </ul>
+      </div>
+    </details>
+
   </div>
 </body>
 </html>
