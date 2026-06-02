@@ -8,206 +8,188 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>BJ50期 動画リンク集</title>
-  <style>
-    :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #dbe2ea;
-      --accent: #2563eb;
-      --accent2: #eff6ff;
-      --youtube: #dc2626;
-      --veo: #7c3aed;
-      --veo-label: #16a34a;
-    }
+<style>
+  :root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #dbe2ea;
+    --accent: #2563eb;
+    --accent2: #eff6ff;
+    --youtube: #dc2626;
+    --veo: #7c3aed;
+    --veo-label: #16a34a;
+    --gap: 14px;
+    --font-main: 1.05rem;
+    --font-head: 1.05rem;
+  }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 20px;
-      background: var(--bg);
-      color: var(--text);
-    }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background: var(--bg);
+    color: var(--text);
+  }
 
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-    }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    gap: var(--gap);
+  }
 
-    h1 {
-      font-size: 28px;
-      margin: 0 0 8px;
-    }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
 
-    .note {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
+  .note {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 14px;
+  }
 
-    .topbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: 16px;
-    }
+  .topbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
 
-    .badge {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #e5eefc;
-      color: #1d4ed8;
-      font-size: 12px;
-      font-weight: 700;
-    }
+  .badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #e5eefc;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+  }
 
-    .group {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-      overflow: hidden;
-    }
+  .group {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    overflow: hidden;
+  }
 
-    .group-head {
-      padding: 16px;
-      font-size: 20px;
-      font-weight: 700;
-      border-bottom: 1px solid var(--border);
-      background: #fff;
-    }
+  .group-head {
+    padding: 16px;
+    font-size: var(--font-head);
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+  }
 
-    details.group {
-      padding: 0;
-    }
+  details.group {
+    padding: 0;
+  }
 
-    summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 16px;
-      font-size: 20px;
-      font-weight: 700;
-      border-bottom: 1px solid var(--border);
-      background: #fff;
-      user-select: none;
-    }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px;
+    font-size: var(--font-head);
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    background: #fff;
+    user-select: none;
+  }
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+  summary::-webkit-details-marker {
+    display: none;
+  }
 
-    summary::after {
-      content: "＋";
-      float: right;
-      color: var(--muted);
-      font-weight: 700;
-    }
+  summary::after {
+    content: "＋";
+    float: right;
+    color: var(--muted);
+    font-weight: 700;
+  }
 
-    details[open] > summary::after {
-      content: "－";
-    }
+  details[open] > summary::after {
+    content: "－";
+  }
 
-    .content {
-      padding: 16px;
-    }
+  .content {
+    padding: 16px;
+    display: grid;
+    gap: var(--gap);
+  }
 
-    .items {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 10px;
-    }
+  .items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--gap);
+  }
 
-    a.link {
-      display: block;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fff;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 700;
-      word-break: break-all;
-    }
+  a.link,
+  .youtube-card,
+  .veo-label {
+    display: block;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    text-decoration: none;
+    font-size: var(--font-main);
+    font-weight: 700;
+    word-break: break-all;
+  }
 
-    a.link:hover,
-    a.link:focus {
-      background: var(--accent2);
-      border-color: #bfdbfe;
-      outline: none;
-    }
+  a.link:hover,
+  a.link:focus,
+  .youtube-card:hover,
+  .youtube-card:focus,
+  .veo-label:hover,
+  .veo-label:focus {
+    background: var(--accent2);
+    border-color: #bfdbfe;
+    outline: none;
+  }
 
-    .youtube-card {
-      position: relative;
-      display: block;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fff;
-      text-decoration: none;
-      overflow: hidden;
-    }
+  .youtube-card {
+    color: var(--text);
+  }
 
-    .youtube-card:hover,
-    .youtube-card:focus {
-      background: var(--accent2);
-      border-color: #bfdbfe;
-      outline: none;
-    }
+  .youtube-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
 
-    .youtube-line {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-      font-weight: 700;
-      min-width: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+  .youtube-title {
+    color: var(--text);
+    font-size: inherit;
+    font-weight: 700;
+  }
 
-    .youtube-title {
-      color: var(--text);
-      flex: 0 0 auto;
-    }
+  .youtube-tag {
+    color: var(--youtube);
+    font-size: inherit;
+    font-weight: 700;
+  }
 
-    .youtube-tag {
-      color: var(--youtube);
-      flex: 0 0 auto;
-    }
+  .veo-tag {
+    color: var(--veo-label);
+    font-size: inherit;
+    font-weight: 700;
+    margin-left: 6px;
+  }
 
-    .veo-tag {
-      color: var(--veo-label);
-      font-weight: 800;
-      margin-left: 6px;
-    }
-
-    .veo-label {
-      display: block;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fff;
-      color: var(--veo);
-      text-decoration: none;
-      font-weight: 700;
-      word-break: break-all;
-    }
-
-    .veo-label:hover,
-    .veo-label:focus {
-      background: var(--accent2);
-      border-color: #bfdbfe;
-      outline: none;
-    }
-  </style>
+  .veo-label {
+    color: var(--veo);
+  }
+</style>
 </head>
 <body>
   <div class="container">
