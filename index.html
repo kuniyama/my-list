@@ -19,6 +19,7 @@
       --accent2: #eff6ff;
       --youtube: #dc2626;
       --veo: #7c3aed;
+      --veo-label: #16a34a;
     }
 
     body {
@@ -142,66 +143,50 @@
       outline: none;
     }
 
-    a.link.youtube {
-      color: var(--youtube);
-    }
-
-    a.link.veo {
-      color: var(--veo);
-    }
-
-    .small {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
-    .inline-link {
+    .youtube-card {
+      position: relative;
       display: block;
       padding: 14px 16px;
       border: 1px solid var(--border);
       border-radius: 12px;
       background: #fff;
-      color: var(--youtube);
       text-decoration: none;
-      font-weight: 700;
-      word-break: break-all;
+      overflow: hidden;
     }
 
-    .inline-link:hover,
-    .inline-link:focus {
+    .youtube-card:hover,
+    .youtube-card:focus {
       background: var(--accent2);
       border-color: #bfdbfe;
       outline: none;
     }
 
-    .youtube-row {
-      display: block;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fff;
-      color: var(--youtube);
-      text-decoration: none;
-      font-weight: 700;
-      word-break: break-all;
-    }
-
-    .youtube-row:hover,
-    .youtube-row:focus {
-      background: var(--accent2);
-      border-color: #bfdbfe;
-      outline: none;
-    }
-
-    .youtube-row .site {
+    .youtube-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       color: var(--text);
       font-weight: 700;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .youtube-row .label {
+    .youtube-title {
+      color: var(--text);
+      flex: 0 0 auto;
+    }
+
+    .youtube-tag {
       color: var(--youtube);
-      font-weight: 700;
+      flex: 0 0 auto;
+    }
+
+    .veo-tag {
+      color: var(--veo-label);
+      font-weight: 800;
+      margin-left: 6px;
     }
 
     .veo-label {
@@ -211,6 +196,7 @@
       border-radius: 12px;
       background: #fff;
       color: var(--veo);
+      text-decoration: none;
       font-weight: 700;
       word-break: break-all;
     }
@@ -226,7 +212,7 @@
 <body>
   <div class="container">
     <h1>BJ50期 動画リンク集</h1>
-    <p class="note">YouTubeは1行表示、VEOは日付ごとに折りたたみ表示です。</p>
+    <p class="note">YouTubeは1行カード表示、VEOは日付ごとに折りたたみ表示です。</p>
 
     <div class="topbar">
       <span class="badge">noindex</span>
@@ -234,29 +220,29 @@
       <span class="badge">日付別整理</span>
     </div>
 
-    <div class="group">
-      <div class="group-head">20251221 厚木リーグ後期　YouTubeプレイリスト</div>
-      <div class="content">
-        <a class="youtube-row" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvUsvfDeUlNS4WcHFN0fSB7q" target="_blank" rel="noopener noreferrer"><span class="site">YouTube</span> / <span class="label">プレイリスト</span></a>
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvUsvfDeUlNS4WcHFN0fSB7q" target="_blank" rel="noopener noreferrer">
+      <div class="youtube-line">
+        <span class="youtube-title">20251221 厚木リーグ後期</span>
+        <span class="youtube-tag">YouTubeプレイリスト</span>
       </div>
-    </div>
+    </a>
 
-    <div class="group">
-      <div class="group-head">20260104 鳶尾TRM　YouTubeプレイリスト</div>
-      <div class="content">
-        <a class="youtube-row" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvWnxOhs_r3H4gSpKE1fy5jG" target="_blank" rel="noopener noreferrer"><span class="site">YouTube</span> / <span class="label">プレイリスト</span></a>
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvWnxOhs_r3H4gSpKE1fy5jG" target="_blank" rel="noopener noreferrer">
+      <div class="youtube-line">
+        <span class="youtube-title">20260104 鳶尾TRM</span>
+        <span class="youtube-tag">YouTubeプレイリスト</span>
       </div>
-    </div>
+    </a>
 
-    <div class="group">
-      <div class="group-head">20260110 ミームTRM　YouTubeプレイリスト</div>
-      <div class="content">
-        <a class="youtube-row" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvX8a1H-_CMz5Ol9L_KlmKjQ" target="_blank" rel="noopener noreferrer"><span class="site">YouTube</span> / <span class="label">プレイリスト</span></a>
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvX8a1H-_CMz5Ol9L_KlmKjQ" target="_blank" rel="noopener noreferrer">
+      <div class="youtube-line">
+        <span class="youtube-title">20260110 ミームTRM</span>
+        <span class="youtube-tag">YouTubeプレイリスト</span>
       </div>
-    </div>
+    </a>
 
     <details class="group">
-      <summary>20260111 選手権　veo</summary>
+      <summary>20260111 選手権 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
           <li><a class="veo-label" href="https://app.veo.co/matches/20260111-1-0170a10b/" target="_blank" rel="noopener noreferrer">① vs 上矢部FC</a></li>
@@ -265,22 +251,22 @@
       </div>
     </details>
 
-    <div class="group">
-      <div class="group-head">20260124 厚木リーグ後期　YouTubeプレイリスト</div>
-      <div class="content">
-        <a class="youtube-row" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvVha3_4IWvfW7jMMWVu9EE0" target="_blank" rel="noopener noreferrer"><span class="site">YouTube</span> / <span class="label">プレイリスト</span></a>
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvVha3_4IWvfW7jMMWVu9EE0" target="_blank" rel="noopener noreferrer">
+      <div class="youtube-line">
+        <span class="youtube-title">20260124 厚木リーグ後期</span>
+        <span class="youtube-tag">YouTubeプレイリスト</span>
       </div>
-    </div>
+    </a>
 
-    <div class="group">
-      <div class="group-head">20260131 BJ招待　YouTubeプレイリスト</div>
-      <div class="content">
-        <a class="youtube-row" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvU_OHeDr5jOYeadGcMgOTrH" target="_blank" rel="noopener noreferrer"><span class="site">YouTube</span> / <span class="label">プレイリスト</span></a>
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvU_OHeDr5jOYeadGcMgOTrH" target="_blank" rel="noopener noreferrer">
+      <div class="youtube-line">
+        <span class="youtube-title">20260131 BJ招待</span>
+        <span class="youtube-tag">YouTubeプレイリスト</span>
       </div>
-    </div>
+    </a>
 
     <details class="group">
-      <summary>20260201 猿ヶ島TRM　veo</summary>
+      <summary>20260201 猿ヶ島TRM <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
           <li><a class="veo-label" href="https://app.veo.co/matches/20260201-cb02568f/" target="_blank" rel="noopener noreferrer">① vs パラブラ</a></li>
@@ -290,15 +276,15 @@
       </div>
     </details>
 
-    <div class="group">
-      <div class="group-head">20260214-15 アルファカップ　YouTubeプレイリスト</div>
-      <div class="content">
-        <a class="youtube-row" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXEx89V19YaQEpnzMKicJCH" target="_blank" rel="noopener noreferrer"><span class="site">YouTube</span> / <span class="label">プレイリスト</span></a>
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXEx89V19YaQEpnzMKicJCH" target="_blank" rel="noopener noreferrer">
+      <div class="youtube-line">
+        <span class="youtube-title">20260214-15 アルファカップ</span>
+        <span class="youtube-tag">YouTubeプレイリスト</span>
       </div>
-    </div>
+    </a>
 
     <details class="group">
-      <summary>20260301 南林間招待　veo</summary>
+      <summary>20260301 南林間招待 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
           <li><a class="veo-label" href="https://app.veo.co/matches/20260301-1-v8254bd9/" target="_blank" rel="noopener noreferrer">① vs 二ツ橋</a></li>
@@ -309,7 +295,7 @@
     </details>
 
     <details class="group">
-      <summary>20260503 バルシュTRM　veo</summary>
+      <summary>20260503 バルシュTRM <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
           <li><a class="veo-label" href="https://app.veo.co/matches/20260503-1u9-v14eee8d/" target="_blank" rel="noopener noreferrer">① vs バルシュ</a></li>
@@ -321,7 +307,7 @@
     </details>
 
     <details class="group">
-      <summary>20260510 市内大会　veo</summary>
+      <summary>20260510 市内大会 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
           <li><a class="veo-label" href="https://app.veo.co/matches/20260510-1-v161323d/" target="_blank" rel="noopener noreferrer">vs ミーム</a></li>
