@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VKR512PPXD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VKR512PPXD');
-</script>
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex nofollow">
@@ -17,6 +8,16 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>BJ50期 動画リンク集</title>
+
+  <!-- Google tag (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKR512PPXD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VKR512PPXD');
+  </script>
+
   <style>
     :root {
       --bg: #f5f7fb;
@@ -139,7 +140,6 @@
       gap: var(--gap);
     }
 
-    a.link,
     .youtube-card,
     .veo-label {
       display: block;
@@ -153,8 +153,6 @@
       word-break: break-all;
     }
 
-    a.link:hover,
-    a.link:focus,
     .youtube-card:hover,
     .youtube-card:focus,
     .veo-label:hover,
@@ -205,21 +203,24 @@
     <h1>BJ50期 動画リンク集</h1>
     <p class="note">YouTubeは1行カード表示、veoは日付ごとに折りたたみ表示にしています。</p>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXXwh3s6uP7F8SuEO_ukzZG" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXXwh3s6uP7F8SuEO_ukzZG" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260531 座間TRM YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260531 座間TRM</span>
         <span class="youtube-tag">YouTube</span>
       </div>
     </a>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvU0unDc0zT1W26mU_RzLacn" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvU0unDc0zT1W26mU_RzLacn" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260530 厚小練習 YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260530 厚小練習</span>
         <span class="youtube-tag">YouTube</span>
       </div>
     </a>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvVms27GUIBMjuqLRV9RzU2k" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvVms27GUIBMjuqLRV9RzU2k" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260524 委託大会第2節 YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260524 委託大会第2節</span>
         <span class="youtube-tag">YouTube</span>
@@ -230,24 +231,32 @@
       <summary>20260517 ミームTRM <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-1u11-v40e43ae/" target="_blank" rel="noopener noreferrer">vs ミーム</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-3u9-v9220667/" target="_blank" rel="noopener noreferrer">① vs ハリマオSC</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-3u11-v62638bc/" target="_blank" rel="noopener noreferrer">② vs ペアーズ戸田</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-u114-v297eddf/" target="_blank" rel="noopener noreferrer">③ vs リベルボーラFC</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-5u11-vc1cf240/" target="_blank" rel="noopener noreferrer">④ vs ペアーズ戸田</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-6u11-v213286d/" target="_blank" rel="noopener noreferrer">⑤ vs ペアーズ戸田</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-1u11-v40e43ae/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260517 ミームTRM vs ミーム' });">vs ミーム</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-3u9-v9220667/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260517 ミームTRM ① vs ハリマオSC' });">① vs ハリマオSC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-3u11-v62638bc/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260517 ミームTRM ② vs ペアーズ戸田' });">② vs ペアーズ戸田</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-u114-v297eddf/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260517 ミームTRM ③ vs リベルボーラFC' });">③ vs リベルボーラFC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-5u11-vc1cf240/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260517 ミームTRM ④ vs ペアーズ戸田' });">④ vs ペアーズ戸田</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260517-6u11-v213286d/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260517 ミームTRM ⑤ vs ペアーズ戸田' });">⑤ vs ペアーズ戸田</a></li>
         </ul>
       </div>
     </details>
 
-    <a class="youtube-card" href="https://youtube.com/playlist?list=PLFzspPm7hQvU1IfD0RKwZU4JcnIb3JtmV&si=h_l2veftc4IfKJRW" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://youtube.com/playlist?list=PLFzspPm7hQvU1IfD0RKwZU4JcnIb3JtmV&si=h_l2veftc4IfKJRW" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260502 厚小練習 YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260502 厚小練習</span>
         <span class="youtube-tag">YouTube</span>
       </div>
     </a>
 
-    <a class="youtube-card" href="https://youtube.com/playlist?list=PLFzspPm7hQvXGd1MptGSZpzt3nXMu9QR6&si=3I6vyg8k4LFDS3IF" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://youtube.com/playlist?list=PLFzspPm7hQvXGd1MptGSZpzt3nXMu9QR6&si=3I6vyg8k4LFDS3IF" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260412 清新カップ YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260412 清新カップ</span>
         <span class="youtube-tag">YouTube</span>
@@ -258,14 +267,18 @@
       <summary>20260301 南林間招待 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260301-1-v8254bd9/" target="_blank" rel="noopener noreferrer">① vs 二ツ橋</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260301-2-v764c22d/" target="_blank" rel="noopener noreferrer">② vs 南林間</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260301-3-v5603762/" target="_blank" rel="noopener noreferrer">③ vs 座間SC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260301-1-v8254bd9/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260301 南林間招待 ① vs 二ツ橋' });">① vs 二ツ橋</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260301-2-v764c22d/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260301 南林間招待 ② vs 南林間' });">② vs 南林間</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260301-3-v5603762/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260301 南林間招待 ③ vs 座間SC' });">③ vs 座間SC</a></li>
         </ul>
       </div>
     </details>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXEx89V19YaQEpnzMKicJCH" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXEx89V19YaQEpnzMKicJCH" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260214-15 アルファカップ YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260214-15 アルファカップ</span>
         <span class="youtube-tag">YouTube</span>
@@ -276,21 +289,26 @@
       <summary>20260201 猿ヶ島TRM <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260201-cb02568f/" target="_blank" rel="noopener noreferrer">① vs パラブラ</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260201-0b36a090/" target="_blank" rel="noopener noreferrer">② vs ペアーズ戸田</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260201-7740c2ec/" target="_blank" rel="noopener noreferrer">③ vs 鳶尾</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260201-cb02568f/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260201 猿ヶ島TRM ① vs パラブラ' });">① vs パラブラ</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260201-0b36a090/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260201 猿ヶ島TRM ② vs ペアーズ戸田' });">② vs ペアーズ戸田</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260201-7740c2ec/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260201 猿ヶ島TRM ③ vs 鳶尾' });">③ vs 鳶尾</a></li>
         </ul>
       </div>
     </details>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvU_OHeDr5jOYeadGcMgOTrH" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvU_OHeDr5jOYeadGcMgOTrH" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260131 BJ招待 YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260131 BJ招待</span>
         <span class="youtube-tag">YouTube</span>
       </div>
     </a>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvVha3_4IWvfW7jMMWVu9EE0" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvVha3_4IWvfW7jMMWVu9EE0" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260124 厚木リーグ後期 YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260124 厚木リーグ後期</span>
         <span class="youtube-tag">YouTube</span>
@@ -301,27 +319,32 @@
       <summary>20260111 選手権 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260111-1-0170a10b/" target="_blank" rel="noopener noreferrer">① vs 上矢部FC</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20260111-2-172c3cb4/" target="_blank" rel="noopener noreferrer">② vs おなり</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260111-1-0170a10b/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260111 選手権 ① vs 上矢部FC' });">① vs 上矢部FC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20260111-2-172c3cb4/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20260111 選手権 ② vs おなり' });">② vs おなり</a></li>
         </ul>
       </div>
     </details>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvX8a1H-_CMz5Ol9L_KlmKjQ" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvX8a1H-_CMz5Ol9L_KlmKjQ" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260110 ミームTRM YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260110 ミームTRM</span>
         <span class="youtube-tag">YouTube</span>
       </div>
     </a>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvWnxOhs_r3H4gSpKE1fy5jG" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvWnxOhs_r3H4gSpKE1fy5jG" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20260104 鳶尾TRM YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20260104 鳶尾TRM</span>
         <span class="youtube-tag">YouTube</span>
       </div>
     </a>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvUsvfDeUlNS4WcHFN0fSB7q" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvUsvfDeUlNS4WcHFN0fSB7q" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20251221 厚木リーグ後期 YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20251221 厚木リーグ後期</span>
         <span class="youtube-tag">YouTube</span>
@@ -332,8 +355,10 @@
       <summary>20251207 リベカル杯 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20251207-1-e01d149e/" target="_blank" rel="noopener noreferrer">① vs 東海フレッズ</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20251207-2-21e6e0b0/" target="_blank" rel="noopener noreferrer">② vs フットワーク</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20251207-1-e01d149e/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20251207 リベカル杯 ① vs 東海フレッズ' });">① vs 東海フレッズ</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20251207-2-21e6e0b0/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20251207 リベカル杯 ② vs フットワーク' });">② vs フットワーク</a></li>
         </ul>
       </div>
     </details>
@@ -342,14 +367,18 @@
       <summary>20251206 リベカル杯 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20251206-1-2ea2e98a/" target="_blank" rel="noopener noreferrer">① vs 八幡SC</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20251206-2-75249086/" target="_blank" rel="noopener noreferrer">② vs 相東SC</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20251206-3-d738658b/" target="_blank" rel="noopener noreferrer">③ vs 緑野FC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20251206-1-2ea2e98a/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20251206 リベカル杯 ① vs 八幡SC' });">① vs 八幡SC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20251206-2-75249086/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20251206 リベカル杯 ② vs 相東SC' });">② vs 相東SC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20251206-3-d738658b/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20251206 リベカル杯 ③ vs 緑野FC' });">③ vs 緑野FC</a></li>
         </ul>
       </div>
     </details>
 
-    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXBJqfO7USyd9b7kSx60ll4" target="_blank" rel="noopener noreferrer">
+    <a class="youtube-card" href="https://www.youtube.com/playlist?list=PLFzspPm7hQvXBJqfO7USyd9b7kSx60ll4" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event', 'youtube_click', { link_label: '20251130 厚木リーグ後期 YouTube' });">
       <div class="youtube-line">
         <span class="youtube-title">20251130 厚木リーグ後期</span>
         <span class="youtube-tag">YouTube</span>
@@ -360,8 +389,10 @@
       <summary>20251103 厚木リーグ後期 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20251103-1-53e7f390/" target="_blank" rel="noopener noreferrer">vs リベルボーラFC</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20251103-vs-4-50-d2e1d73b/" target="_blank" rel="noopener noreferrer">vs ペアーズ戸田</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20251103-1-53e7f390/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20251103 厚木リーグ後期 vs リベルボーラFC' });">vs リベルボーラFC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20251103-vs-4-50-d2e1d73b/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20251103 厚木リーグ後期 vs ペアーズ戸田' });">vs ペアーズ戸田</a></li>
         </ul>
       </div>
     </details>
@@ -370,8 +401,10 @@
       <summary>20250608 厚木リーグ前期 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20250608-1f37dd1e/" target="_blank" rel="noopener noreferrer">vs ペアーズ戸田</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20250608-e9dbde2c/" target="_blank" rel="noopener noreferrer">vs FCクレセール</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20250608-1f37dd1e/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20250608 厚木リーグ前期 vs ペアーズ戸田' });">vs ペアーズ戸田</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20250608-e9dbde2c/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20250608 厚木リーグ前期 vs FCクレセール' });">vs FCクレセール</a></li>
         </ul>
       </div>
     </details>
@@ -380,8 +413,10 @@
       <summary>20250427 委託大会 3位決定戦 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20250427-2eb3a718/" target="_blank" rel="noopener noreferrer">vs リベルボーラFC</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20250427-4d607532/" target="_blank" rel="noopener noreferrer">vs 荻野SC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20250427-2eb3a718/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20250427 委託大会 3位決定戦 vs リベルボーラFC' });">vs リベルボーラFC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20250427-4d607532/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20250427 委託大会 3位決定戦 vs 荻野SC' });">vs 荻野SC</a></li>
         </ul>
       </div>
     </details>
@@ -390,7 +425,8 @@
       <summary>20250330 SOYO招待 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20250330-b37cfd46/" target="_blank" rel="noopener noreferrer">vs SOYO FC</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20250330-b37cfd46/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20250330 SOYO招待 vs SOYO FC' });">vs SOYO FC</a></li>
         </ul>
       </div>
     </details>
@@ -399,8 +435,10 @@
       <summary>20250209 県央リーグ入替戦 <span class="veo-tag">veo</span></summary>
       <div class="content">
         <ul class="items">
-          <li><a class="veo-label" href="https://app.veo.co/matches/20250209-4d41e011/" target="_blank" rel="noopener noreferrer">vs 荻野</a></li>
-          <li><a class="veo-label" href="https://app.veo.co/matches/20250209-50-ddb3826d/" target="_blank" rel="noopener noreferrer">vs ハリマオ</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20250209-4d41e011/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20250209 県央リーグ入替戦 vs 荻野' });">vs 荻野</a></li>
+          <li><a class="veo-label" href="https://app.veo.co/matches/20250209-50-ddb3826d/" target="_blank" rel="noopener noreferrer"
+                 onclick="gtag('event', 'veo_click', { link_label: '20250209 県央リーグ入替戦 vs ハリマオ' });">vs ハリマオ</a></li>
         </ul>
       </div>
     </details>
