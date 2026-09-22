@@ -19,6 +19,83 @@
   </script>
 
   <style>
+
+    /* Password screen */
+    #password-screen {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .password-card {
+      width: min(420px, 100%);
+      box-sizing: border-box;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+
+    .password-card h1 {
+      margin-bottom: 8px;
+    }
+
+    .password-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .password-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .password-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .password-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent2);
+    }
+
+    .password-button {
+      padding: 12px 14px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .password-button:hover,
+    .password-button:focus {
+      opacity: 0.9;
+      outline: none;
+    }
+
+    .password-error {
+      min-height: 1.6em;
+      margin: 2px 0 0 !important;
+      color: #dc2626 !important;
+      font-size: 14px !important;
+    }
+
+    #site-content {
+      display: none;
+    }
     :root {
       --bg: #f5f7fb;
       --card: #ffffff;
@@ -199,7 +276,22 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div id="password-screen">
+    <div class="password-card">
+      <h1>BJ50期 動画リンク集</h1>
+      <p>閲覧するにはパスワードを入力してください。</p>
+      <form class="password-form" onsubmit="return checkPassword(event);">
+        <input id="password-input" class="password-input" type="password"
+               autocomplete="current-password" placeholder="パスワード"
+               aria-label="パスワード">
+        <button class="password-button" type="submit">入る</button>
+        <p id="password-error" class="password-error" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div id="site-content">
+    <div class="container">
     <h1>BJ50期 動画リンク集</h1>
     <p class="note">YouTubeは1行カード表示、veoは日付ごとに折りたたみ表示にしています。</p>
 
@@ -515,6 +607,54 @@
       </div>
     </details>
 
+    </div>
   </div>
+
+  <script>
+    // パスワードのSHA-256ハッシュ
+    // パスワードを変更する場合は、この値を変更してください。
+    const PASSWORD_HASH = 'c9d44a13330d37a617c3c64f1b2cba13929afee856616a4b69c53f38dedf13fb';
+
+    async function sha256(text) {
+      const data = new TextEncoder().encode(text);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(hashBuffer))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+    }
+
+    async function checkPassword(event) {
+      event.preventDefault();
+
+      const input = document.getElementById('password-input');
+      const error = document.getElementById('password-error');
+      const hash = await sha256(input.value);
+
+      if (hash === PASSWORD_HASH) {
+        sessionStorage.setItem('video_link_authenticated', '1');
+        showSite();
+      } else {
+        error.textContent = 'パスワードが正しくありません。';
+        input.value = '';
+        input.focus();
+      }
+
+      return false;
+    }
+
+    function showSite() {
+      document.getElementById('password-screen').style.display = 'none';
+      document.getElementById('site-content').style.display = 'block';
+    }
+
+    // 同じタブ内では再入力を省略
+    if (sessionStorage.getItem('video_link_authenticated') === '1') {
+      showSite();
+    } else {
+      window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('password-input').focus();
+      });
+    }
+  </script>
 </body>
 </html>
